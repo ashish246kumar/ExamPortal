@@ -1,0 +1,54 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt-20">
+                    
+                    <mat-card-header>
+                        
+                        <mat-card-title >Read The Instruction Of The Page CareFully</mat-card-title>
+                        <mat-card-subtitle >One Step More To Go</mat-card-subtitle>
+                       
+                      </mat-card-header>
+                      <mat-card-content class="ml-20">
+                            <h1 class=" mt-10">{{quiz?.title}}</h1>
+                            <p>{{quiz?.description}}</p>
+                         <mat-divider>
+
+                         </mat-divider> 
+                         <br> 
+                         <h1>Important Instruction</h1> 
+                         <ul>
+                            <li>This Quiz is Only For Pratice PurPose</li>
+                            <li>You Have To Submit The Quiz With in 
+                            <b>{{quiz?.numberOfQuestion*2}}Minute</b>
+                            </li>
+                            <li>You Can Attempt The Quiz Any Number Of Time</li>
+                            <li>There is No Negative Marking In this Quize</li>
+                            <li>Total Question:{{quiz?.numberofQuestion}}</li>
+                            <li>Total Marks:<b>{{quiz?.maxMarks}}</b></li>
+                            <li>Each Question Carries:<b>{{quiz?.maxMarks/quiz?.numberOfQuestion}}Marks</b></li>
+                            <li>All Question of Mcq Type</li>
+                         </ul>
+                         <mat-divider>
+
+                         </mat-divider> 
+                         <br> 
+                         <h1>Attemting Quiz</h1>
+                         <li>Click &nbsp;<b>Start Quiz</b>&nbsp;button to Start Quiz</li>
+                         <li>The Time Will Start The Moment You Click Start Button</li>
+                         <li>You Can Not Resume The Quiz If Intrupted due To any Reason</li>
+                         <li>Scroll Down To Move To Next Quiz</li>
+                         <li>Click Submit On Complemetion Of Quiz</li>
+                         <li>Report Of Test is AutoMatically Generated in the form of Pdf Copy</li>
+
+                      </mat-card-content>
+                       <mat-card-actions class="mt-10 ml-20" style="padding-bottom: 10px; padding-left: 20px;">
+                        <button mat-raised-button color="primary" (click)="start()">Start</button>
+                       </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<mat-card class="mt-20">
+   
+    <div mat-subheader class="text-center" >
+        <h1>{{title}}</h1>
+    </div>
+</mat-card>
+<div class="bootstrap-wrapper">
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="container text-center">
+                    <button mat-raised-button color="primary" 
+                    [routerLink]="'/admin/question-add/'+qid+'/'+title"
+                    class="mt-20"
+                    >Add Question</button>
+                </div>
+                <mat-card class="mt-20" *ngFor="let q of question; let i=index">
+                  <mat-card-content>
+                   <p>
+                       <b>Q{{i+1}}</b>
+                       <span class="ml20" [innerHTML]="q.content"></span>
+                   </p>
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-6">
+                                <p><b>1)</b>{{q.option1}}</p>
+                           </div>
+                           <div class="col-md-6">
+                            <p><b>2)</b>{{q.option2}}</p>
+                       </div>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-6">
+                            <p><b>3)</b>{{q.option3}}</p>
+                       </div>
+                       <div class="col-md-6">
+                        <p><b>4)</b>{{q.option4}}</p>
+                       
+                   </div>
+                       </div>
+                       <mat-divider></mat-divider>
+                       <p class="mt-20">Correct Answer:&nbsp;<b>{{q.answer}}</b></p>
+                   </div>
+                   
+                </mat-card-content>
+                <div class="container text-center">
+                 
+                    <mat-card-actions>
+                    <button mat-stroked-button color="warn" (click)="delete(q.quesId)">Delete</button>
+                    <button mat-stroked-button color="primary" class="ml20" >Update</button>
+                    </mat-card-actions>
+                
+                </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

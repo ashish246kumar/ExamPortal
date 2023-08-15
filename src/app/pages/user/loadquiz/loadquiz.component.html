@@ -1,0 +1,44 @@
+<!-- {{quizComntainer|json}} -->
+<!-- *ngIf="quizComntainer.length!=0" -->
+<mat-card  *ngIf="quizComntainer?.length != 0"  class="text-center" style="margin-top: 20px;">
+    <mat-card-content>
+        <h1>All Quizes</h1>
+    </mat-card-content>
+</mat-card>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" *ngIf="quizComntainer">
+            <div class="col-md-6" *ngFor="let c of quizComntainer">
+                <mat-card class="mt-20">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                     <mat-card-title>{{c.title}}</mat-card-title>   
+                    <mat-card-subtitle>
+                        {{c.category.title}}
+                    </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{c.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button color="accent" class="ml20">Question:{{c.numberOfQuestion}}</button>
+                        <button mat-button color="accent" ml20>MM:{{c.maxMarks}}</button>
+                        <button  mat-raised-button color="primary" class="ml20">view</button>
+                        <button mat-raised-button color="primary" class="ml20" [routerLink]="'/user-dashboard/instruction/'++c.qid" >Start</button>
+                        
+                    </mat-card-actions>
+                </mat-card>
+                      
+
+            </div>
+        </div>
+        <!-- *ngIf="quizComntainer.length==0" -->
+        <div class="container" *ngIf="quizComntainer?.length==0" style="margin-top: 20px;" class="text-center">
+            <mat-card>
+                <mat-card-content>
+                    <h1>No Data in this category</h1>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
