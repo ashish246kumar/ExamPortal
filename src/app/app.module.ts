@@ -41,6 +41,7 @@ import { InstructionComponent } from './pages/user/instruction/instruction.compo
 import { StartComponent } from './pages/user/start/start.component';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { UpdatequestionComponent } from './pages/admin/updatequestion/updatequestion.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     LoadquizComponent,
     InstructionComponent,
     StartComponent,
+    UpdatequestionComponent,
    
   ],
   imports: [

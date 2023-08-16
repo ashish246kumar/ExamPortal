@@ -23,5 +23,12 @@ export class QuestionService {
   public getQuestionOfQuizForTest(qid:any){
        return this.http.get(`${baseUrl}/question/quiz/${qid}`)
   }
-  
+  public getQuestionByQuestionId(qnsId:any){
+       
+        return this.http.get(`${baseUrl}/question/${qnsId}`);
+  }
+  public updateQuestion(question:any){
+    return this.http.put(`${baseUrl}/question/`,question)
+
+  }
 }

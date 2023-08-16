@@ -13,19 +13,22 @@ export class ViewQuizQuestionComponent implements OnInit{
   qid:any;
   title:any;
   question:any=[];
+  i=0;
   ngOnInit(): void {
       this.qid=this.actroute.snapshot.paramMap.get('qid');
       this.title=this.actroute.snapshot.paramMap.get('title');
-      
+      this.i=this.i+1;
       
         this.qnsService.getQuestionOfQuiz(this.qid).subscribe((data:any)=>{
               this.question=data;
-              console.log(this.question);
+              console.log("**********************"+this.question);
+              
         },
         (error)=>{
             Swal.fire("Error !!","Error in Loading Question","error");
         }
         );
+        
       
   }
   constructor(private actroute:ActivatedRoute,private route:Router,private qnsService:QuestionService,private snack:MatSnackBar

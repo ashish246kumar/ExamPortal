@@ -1,0 +1,70 @@
+
+<div class="container text-center mt-20">
+    <mat-card>
+     <h1>UPDATE QUESTION</h1>
+    </mat-card>
+</div>
+<div class="bootstrap-wrapper">
+    <div class="container mt-20">
+        <div class="row">
+            <div class="col-md-8 offset-md-1">
+                <form (submit)="updateqns()">
+                <mat-card>
+
+                 <mat-card-content>
+                    
+                    <mat-form-field appearance="outline" class="w100">
+                        <mat-label>Enter Question</mat-label>
+                        <input matInput matInput autofocus type="text" name="content" [value]="qnsContainer.content"
+                        [(ngModel)]="qnsContainer.content" 
+                        >
+                       
+                    </mat-form-field>
+                 </mat-card-content>
+                </mat-card>
+                <mat-card class="mt-20">
+                    <div class="row mt-20">
+                        <div class="col-md-6 ">
+                            <mat-form-field appearance="outline">
+                                <mat-label> Option1</mat-label>
+                                <input matInput required [(ngModel)]="qnsContainer.option1"  type="text" name="option1" [value]="qnsContainer.option1">
+                                
+                              </mat-form-field> 
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Option2</mat-label>
+                                <input matInput required [(ngModel)]="qnsContainer.option2"  type="text" name="option2" [value]="qnsContainer.option2">
+                                
+                              </mat-form-field> 
+                        </div>
+                    </div>
+                    <div class="row mt-20">
+                        <div class="col-md-6 ">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Option3</mat-label>
+                                <input matInput required [(ngModel)]="qnsContainer.option3"  type="text" name="option3" [value]="qnsContainer.option3">
+                                
+                              </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Option4</mat-label>
+                                <input matInput required [(ngModel)]="qnsContainer.option4"  type="text" name="option4" [value]="qnsContainer.option4">
+                                
+                              </mat-form-field>
+                        </div>
+                    </div>
+                   
+                </mat-card>
+                 <div class="container text-center mt-20">
+                    <button mat-fab color="primary" aria-label="Example icon button with a home icon" type="submit">
+                      <mat-icon>update</mat-icon>
+                    </button>
+                  </div>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

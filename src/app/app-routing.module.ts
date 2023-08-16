@@ -19,6 +19,7 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { LoadquizComponent } from './pages/user/loadquiz/loadquiz.component';
 import { InstructionComponent } from './pages/user/instruction/instruction.component';
 import { StartComponent } from './pages/user/start/start.component';
+import { UpdatequestionComponent } from './pages/admin/updatequestion/updatequestion.component';
 
 const routes: Routes = [
   {
@@ -77,6 +78,10 @@ const routes: Routes = [
       {
         path:"question-add/:qid/:title",
         component:AddQuestionComponent
+      },
+      {
+        path:"question-update/:qnsId",
+        component:UpdatequestionComponent
       }
      ]
     
